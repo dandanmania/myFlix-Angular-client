@@ -1,0 +1,122 @@
+// User Info
+.info-div {
+    text-align: -webkit-center;
+}
+
+.info-card {
+    width: 85%;
+    height: 150px;
+    margin-top: 16px;
+    background-color: rgba(214, 172, 67, 0.781);
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.info-header {
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    margin-left: 16px;
+}
+
+.info-cont-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-line {
+    text-align: left;
+}
+
+.info-button {
+    background-color: #494949;
+    color: aliceblue;
+    min-width: 150px;
+    max-width: 500px;
+    place-self: center
+}
+
+// Card Styles (from movie-card)
+.card-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+.card {
+    width: 415px;
+    display: flex;
+    flex-direction: column;
+    margin: 18px;
+    background-color: rgba(66, 153, 117, 0.63);
+}
+
+.card-title {
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.subtitle-container-one {
+    margin-top: 9px;
+    margin-bottom: 6px;
+}
+
+.subtitle-container-two {
+    margin-bottom: 6px;
+}
+
+.subtitle-content {
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.img-div {
+    text-align:center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mov-img {
+    height: 400px;
+    max-width: -webkit-fill-available;
+    align-self: center;
+}
+
+.act-div{
+    text-align:center;
+    margin-top: auto;
+}
+
+.card-action {
+    margin-bottom: 0px;
+}
+
+.card-button-first {
+    background-color: #494949;
+    color: aliceblue; margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.card-button {
+    background-color: #494949;
+    color: aliceblue;
+    margin-bottom: 8px;
+}
+
+.synopsis-button {
+    background-color: aliceblue; 
+    color: #494949;
+}
+
+.like-button {
+    vertical-align: middle;
+}
