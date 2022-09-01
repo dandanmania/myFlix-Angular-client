@@ -1,0 +1,35 @@
+.welcome-div {
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    padding-top: 200px;
+}
+
+.welcome-card {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: #272727;
+}
+
+.welcome-header{
+    place-content: center;
+}
+
+.welcome-title {
+    color: azure;
+}
+
+.welcome-button {
+    background-color: rgba(66, 153, 117, 0.63);
+    color: azure;
+    margin-right: 10px;
+}
+
+.first-button {
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+}
