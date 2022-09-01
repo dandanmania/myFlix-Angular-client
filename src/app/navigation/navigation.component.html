@@ -1,0 +1,12 @@
+<mat-toolbar class="dark-bg">
+    <img src="../../assets/myFlixLogo.png" class="logo" (click)="toHome()">
+    <span class="spacer"></span>
+    <button mat-stroked-button class="gold-bg" (click)="toProfile()">{{user}}</button>
+    <button
+        mat-raised-button color="warn"
+        class="log-button"
+        (click)="triggerLogOut()"
+    >
+        Logout
+    </button>
+</mat-toolbar>
