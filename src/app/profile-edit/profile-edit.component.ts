@@ -23,7 +23,8 @@ export class ProfileEditComponent implements OnInit {
     public dialog: MatDialog,
     public dialogRef: MatDialogRef<ProfileEditComponent>,
     public fetchApiData: UserRegistrationService,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -37,9 +38,7 @@ export class ProfileEditComponent implements OnInit {
       this.snackBar.open('Update successful!', 'OK', {
         duration: 2000
       });
-      setTimeout(function() {
-        window.location.reload();
-      }, 4500)
+      this.router.navigate(['profile']);
     })
   }
 
