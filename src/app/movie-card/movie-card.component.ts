@@ -26,6 +26,11 @@ export class MovieCardComponent implements OnInit {
     this.getFaves();
   }
 
+  /**
+   * Open Genre Dialog
+   * @param name Genre Name
+   * @param description Genre Description
+   */
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreComponent, {
       data: {
@@ -36,6 +41,11 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Open Director Dialog
+   * @param name Director Name
+   * @param description Director Description
+   */
   openDirectorDialog(name: string, description: string): void{
     this.dialog.open(DirectorComponent, {
       data: {
@@ -46,6 +56,10 @@ export class MovieCardComponent implements OnInit {
     })
   }
 
+  /**
+   * Open Synopsis Dialog
+   * @param description Movie Description
+   */
   openSynopsisDialog(description: string): void {
     this.dialog.open(SynopsisComponent, {
       data: {
@@ -55,30 +69,39 @@ export class MovieCardComponent implements OnInit {
     })
   }
 
+  /**
+   * Get All Movies Array
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
-      //console.log(this.movies);
       return this.movies;
     })
   }
 
+  /**
+   * Get All Directors Array
+   */
   getDirectors(): void {
     this.fetchApiData.getAllDirectors().subscribe((resp: any) => {
       this.directors = resp;
-      //console.log(this.directors);
       return this.directors;
     })
   }
 
+  /**
+   * Get All Genres Array
+   */
   getGenres(): void {
     this.fetchApiData.getAllGenres().subscribe((resp: any) => {
       this.genres = resp;
-      //console.log(this.genres);
       return this.genres;
     })
   }
 
+  /**
+   * Get User Favorites Array and User Object
+   */
   getFaves(): void {
     let username = localStorage.getItem('user');
     this.fetchApiData.getUser(username).subscribe((resp: any) => {
@@ -88,17 +111,29 @@ export class MovieCardComponent implements OnInit {
     })
   }
 
+  /**
+   * Check if Favorites is included in the User Favorites Array
+   * @param id Movie ID
+   * @returns Boolean
+   */
   faveCheck(id: string): boolean {
     return this.faves.includes(id)
   }
 
+  /**
+   * Add Movie to User Favorites
+   * @param id Movie ID
+   */
   addFave(id: string): void {
     this.fetchApiData.addFavorite(id).subscribe((resp: any) => {
       this.getFaves();
-      //console.log(this.faves)
     })
   }
 
+  /**
+   * Remove Movie from User Favorites
+   * @param id Movie ID
+   */
   deleteFave(id: string): void {
     let username = localStorage.getItem('user')
     this.fetchApiData.deleteFavorite(username, id).subscribe((resp: any) => {
@@ -106,5 +141,4 @@ export class MovieCardComponent implements OnInit {
       //console.log(this.faves);
     })
   }
-
 }

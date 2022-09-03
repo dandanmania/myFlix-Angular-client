@@ -1,6 +1,6 @@
 # MyFlixAngularClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+This project is from [CareerFoundry's Full Stack Web Development Program](https://careerfoundry.com/en/courses/become-a-web-developer/) Achievement 6. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3 and Angular Material to utilize the [API from Achievement 2](https://github.com/dandanmania/movie_api) and display information of a few anime movies (Movies, Directors, Genres). Users will be able to register to gain access to the site, update their personal information, and create and manage a list of their favorite movies. Users can also deregister at any time.
 
 ## Development server
 

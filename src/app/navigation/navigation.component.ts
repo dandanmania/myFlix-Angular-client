@@ -17,15 +17,24 @@ export class NavigationComponent implements OnInit {
     this.user = localStorage.getItem('user');
   }
 
+  /**
+   * Log user out
+   */
   triggerLogOut(): void {
     localStorage.clear();
     this.router.navigate(['']);
   }
 
+  /**
+   * Route to Profile Page
+   */
   toProfile(): void {
     this.router.navigate(['profile'])
   }
 
+  /**
+   * Route to Movies Page
+   */
   toHome(): void {
     this.router.navigate(['movies'])
   }

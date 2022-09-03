@@ -23,10 +23,16 @@ export class DeleteUserWarningComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Close Dialog
+   */
   closeDialog(): void{
     this.dialogRef.close()
   }
 
+  /**
+   * Delete User
+   */
   deleteUser(): void {
     let username = localStorage.getItem('user')
     this.fetchApiData.deleteUser(username).subscribe((result) => {

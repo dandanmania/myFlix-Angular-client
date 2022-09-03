@@ -30,6 +30,9 @@ export class ProfileEditComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Edit User Details and display Success Message + Refresh when Successful
+   */
   editUser(): void {
     console.log(this.userData);
     this.fetchApiData.editUser(this.userData).subscribe((result) => {
@@ -42,6 +45,9 @@ export class ProfileEditComponent implements OnInit {
     })
   }
 
+  /**
+   * Display Delete User Warning Dialog
+   */
   openDeleteUserDialog(): void {
     this.dialogRef.close()
     this.dialog.open(DeleteUserWarningComponent, {

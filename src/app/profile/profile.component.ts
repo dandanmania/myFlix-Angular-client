@@ -17,6 +17,10 @@ export class ProfileComponent extends MovieCardComponent implements OnInit {
 
   ngOnInIt(): void {}
 
+  /**
+   * Opens Profile Edit Dialog with Username data (for Display)
+   * @param username Username
+   */
   openProfileEdit(username: string): void {
     this.dialog.open(ProfileEditComponent, {
       data: {

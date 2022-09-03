@@ -5,6 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class IdConvertPipe implements PipeTransform {
   
+  /**
+   * Filter Objects or ID's
+   * @param items Array with ID's or Objects
+   * @param filter Array of ID's that need to be filtered
+   * @returns Array with filtered objects
+   */
   transform(items: any[], filter: Object): any {
     // If items or filter doesn't have anything, return items
     if (!items || !filter) {
@@ -19,7 +25,7 @@ export class IdConvertPipe implements PipeTransform {
         itemContainer.push(filteredContainer[0])
       }
     }
-    //console.log(itemContainer)
+
     return itemContainer
   }
 }
